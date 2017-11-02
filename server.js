@@ -7,7 +7,6 @@ app.use(express.static('./public'))
 app.get('/server', function(req, res){
   var nasaurl = `https://api.nasa.gov/neo/rest/v1/feed?start_date=${req.query.userdate}&end_date=${req.query.userdate}&api_key=uBbS7vZx5Jtx6pAfsZBVVrMThUPYxy6eMNq7m8iG`;
   request( nasaurl, function(err, response, body){
-    console.log('fdsfds')
     res.send(body)
   })
 })
